@@ -1,0 +1,17 @@
+# Loại bỏ các file .ipynb
+*.ipynb
+
+# Loại bỏ các file biên dịch
+.ipynb_checkpoints/
+__pycache__/
+.vscode/
+.idea/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+
+mounts/
+mounts
+flagged/
+ngrok
+viber_bot/data/subscriber.json
