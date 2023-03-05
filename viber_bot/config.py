@@ -9,7 +9,7 @@ def get_parent_root_path():
 
 
 service_config_file_name = os.path.join(get_parent_root_path(), "data/service_config.yml")
-with open(service_config_file_name, "r") as file:
+with open(service_config_file_name, "r", encoding="utf8") as file:
     config = yaml.safe_load(file)
 
 BOT_CONFIG_FILE_NAME = os.path.join(get_parent_root_path(), "data/bot_config.yml")

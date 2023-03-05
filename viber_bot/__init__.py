@@ -19,7 +19,7 @@ def get_bot_config():
         if time.time() - start_time > timeout:
             raise IOError(f"Đang có tiến trình khác mở {BOT_CONFIG_FILE_NAME}, do đó Viberbot không thể mở file để đọc")
         try:
-            with open(BOT_CONFIG_FILE_NAME, "r") as file:
+            with open(BOT_CONFIG_FILE_NAME, "r", encoding="utf8") as file:
                 bot_config = yaml.safe_load(file)
             return bot_config
         except:

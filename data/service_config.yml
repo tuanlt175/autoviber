@@ -11,4 +11,4 @@ LOG_FOLDER: "C:\\Appl\\IMMI\\IMMICheck\\binDebug\\LogResult"
 # LOG_FOLDER: "/home/thanhtuan/Desktop/auto-viber-bot/logs"
 
 # Địa chỉ ip public của bot
-WEBHOOK_URL: "14.225.5.199:5005"
+WEBHOOK_URL: "http://14.225.5.199:5005"
