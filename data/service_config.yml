@@ -7,7 +7,7 @@ WORKERS: 1
 
 # Thư mục chứa log
 # Nếu có file trong thư mục LOG_FOLDER, bot sẽ gửi thông báo cho người dùng
-LOG_FOLDER: "C:\\Appl\\IMMI\\IMMICheck\\binDebug\\LogResult"
+LOG_FOLDER: "C:\\Appl\\IMMI\\IMMICheck\\bin\\Debug\\LogResult"
 # LOG_FOLDER: "/home/thanhtuan/Desktop/auto-viber-bot/logs"
 
 # Địa chỉ ip public của bot
