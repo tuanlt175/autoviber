@@ -1,19 +1,14 @@
-# Khoảng thời gian giữa hai lần gửi tin nhắn liên tiếp của Bot
-SEND_MESSAGE_ITER_TIME: 10
+# Khoảng thời gian giữa hai lần kiểm tra log liên tiếp
+SEND_MESSAGE_ITER_TIME: 1
 # Flask micro service
 SERVICE_HOST: "0.0.0.0"
 SERVICE_PORT: 5005
 WORKERS: 1
 
-# Redis: Nếu sử dụng docker, các tham số redis này là mặc định, không được thay đổi
-USERS_FOR_BOT: "USERS_FOR_BOT"
-INTERNAL_REDIS_HOST: "127.0.0.1"
-INTERNAL_REDIS_PORT: 6379
-INTERNAL_REDIS_DB: 2
-INTERNAL_REDIS_PW: null
+# Thư mục chứa log
+# Nếu có file trong thư mục LOG_FOLDER, bot sẽ gửi thông báo cho người dùng
+LOG_FOLDER: "C:\\Appl\\IMMI\\IMMICheck\\binDebug\\LogResult"
+# LOG_FOLDER: "/home/thanhtuan/Desktop/auto-viber-bot/logs"
 
 # Địa chỉ ip public của bot
-WEBHOOK_URL: "https://04a9-42-118-204-148.ap.ngrok.io"
-
-# File txt chứa nội dung tin nhắn gửi đi
-TXT_DATA_FILE_PATH: message.txt
+WEBHOOK_URL: "14.225.5.199:5005"
