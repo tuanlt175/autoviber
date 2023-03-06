@@ -1,11 +1,9 @@
-viberbottest175:
-  name: "ViberBotTest"
-  auth_token: "50906a00d8a7e217-c05419dd57775031-de602f7d7ca37b5b"
-  avatar: "https://dl-media.viber.com/1/share/2/long/vibes/icon/image/0x0/5c8e/18eb09bd599ac85be386f9765eeea596e3280edbf1b56b12421ff5472f625c8e.jpg"
-  subscribers:
-    yDRnLpx9fX4nCTBtZ9pg+Q==: "Tuan Le"
+bot462notifiy1:
+  name: "Bot462Notifiy1"
+  auth_token: "50ac86aeec27dedd-b31109cc37fd92c1-39173e89461b1454"
+  avatar: "https://dl-media.viber.com/1/share/2/long/vibes/icon/image/0x0/abc2/9433c2058ba6972c1511991c42053aca2b15757903e2c31c7924f7029d99abc2.jpg"
 
-viberbottest176:
-  name: "ViberBotTest2"
-  auth_token: "50918c919da7e12a-383f51c894d670e2-bb416617b671b807"
-  avatar: "https://dl-media.viber.com/1/share/2/long/vibes/icon/image/0x0/546f/7dc5e6c1486f06aeeb0c67220cf3e6e97b04588d2cab4169152c96d7b08e546f.jpg"
+bot462notifiy2:
+  name: "Bot462Notifiy2"
+  auth_token: "50ac87a05be7e116-a34ae1185973360f-b29400d106134aec"
+  avatar: "https://dl-media.viber.com/1/share/2/long/vibes/icon/image/0x0/fb8b/1144f11644269e9142a72a0c5da7b409f41440f50760d7ea38a1e2e2892dfb8b.jpg"

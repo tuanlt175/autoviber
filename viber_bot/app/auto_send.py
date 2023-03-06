@@ -4,7 +4,8 @@ from viberbot.api.messages.text_message import TextMessage
 from viber_bot.config import (
     SEND_MESSAGE_ITER_TIME,
     LOG_FOLDER,
-    WEBHOOK_URL
+    WEBHOOK_URL,
+    NUM_MESSAGE
 )
 from viber_bot import get_bot_config
 import datetime
@@ -50,10 +51,14 @@ def get_text_message():
 def check_logs():
     if not os.path.isdir(LOG_FOLDER):
         assert False, f"Thư mục {LOG_FOLDER} không tồn tại!"
-    if len(os.listdir(LOG_FOLDER)) > 0:
-        return True
+    all_files = [
+        os.path.join(LOG_FOLDER, fname)
+        for fname in os.listdir(LOG_FOLDER)
+    ]
+    if len(all_files) > 0:
+        return all_files
     else:
-        return False
+        return None
 
 
 def get_bot_info(bot_uri):
@@ -90,9 +95,10 @@ if __name__ == "__main__":
     old_bot_config = BOT_CONFIG
     time.sleep(2)
     while True:
-        data = get_text_message()
-        if check_logs():
-            for i in range(10):
+        all_files = check_logs()
+        if all_files is not None:
+            data = get_text_message()
+            for i in range(NUM_MESSAGE):
                 for bot_uri, viber in all_vibers.items():
                     bot_info = get_bot_info(bot_uri)
                     unames = []
@@ -102,6 +108,7 @@ if __name__ == "__main__":
 
                     logger.info(bot_info["name"] + "vừa gửi message '" + data + "' cho " + "; ".join(unames))
                 time.sleep(SEND_MESSAGE_ITER_TIME * 2)
-            break
+            for filename in all_files:
+                os.remove(filename)
 
         time.sleep(SEND_MESSAGE_ITER_TIME)
