@@ -48,6 +48,8 @@ def save_subscriber(bot_uri, user_id):
 
 @app.route('/<bot_uri>', methods=['POST'])
 def incoming(bot_uri):
+    if bot_uri not in all_vibers:
+        return Response(status=403)
     viber = all_vibers[bot_uri]
 
     logger.info(f"Received request - post data: {request.get_data()}")
